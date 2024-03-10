@@ -1,0 +1,59 @@
+.hero__padding {
+    padding: 40px 0;
+}
+
+.hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../img/hero/hero-background.jpg);
+    padding: 200px 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__title {
+        color: $second-accent-color;
+        text-align: center;
+        font-size: 44px;
+        font-weight: 900;
+        line-height: 1.36;
+        letter-spacing: 2.64px;
+        text-transform: uppercase;
+        max-width: 696px;
+        margin-bottom: 40px;
+        animation-name: title-move;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+    }
+
+
+
+    &__button {
+        color: $second-accent-color;
+        text-align: center;
+        padding: 10px 32px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.87;
+        letter-spacing: 0.96px;
+        border-radius: 4px;
+        background-color: $accent-color;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+        animation-name: btn-move;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+
+        &:hover,
+        &:focus {
+            background-color: $hover;
+        }
+    }
+
+}
