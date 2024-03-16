@@ -1,5 +1,4 @@
-@mixin logo($logo-color: $accent) {
-    color: $accent-color;
+@mixin logo($logo-color: $accent-color) {
     font-family: Raleway;
     font-size: 26px;
     font-weight: 700;
@@ -22,9 +21,9 @@
     transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
-@mixin flexbox($justify: center, $align: center) {
+@mixin flexbox($justify: center, $align: center, $wrap: wrap) {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: $wrap;
 }

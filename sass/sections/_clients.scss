@@ -6,7 +6,7 @@
     }
 
     &__list {
-        @include flexbox();
+        @include flexbox($wrap: nowrap);
         gap: 30px;
     }
 

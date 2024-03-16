@@ -41,35 +41,35 @@
         margin-bottom: 16px;
     }
 
-    &__icon {
+    &__icons {
         @include flexbox();
         gap: 10px;
+    }
 
-        &__link {
-            width: 44px;
-            height: 44px;
-            @include flexbox();
-            border-radius: 50%;
-            transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    &__link {
+        width: 44px;
+        height: 44px;
+        @include flexbox();
+        border-radius: 50%;
+        transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 
-            &:hover,
-            &:focus {
-                background-color: $accent-color;
-            }
+        &:hover,
+        &:focus {
+            background-color: $accent-color;
         }
+    }
 
-        &__svg {
-            fill: $icon-fill;
-            transition: fill cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-        }
+    &__svg {
+        fill: $icon-fill;
+        transition: fill cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    }
 
-        &__link:hover &__svg {
-            fill: $second-accent-color;
-        }
+    &__link:hover &__svg {
+        fill: $second-accent-color;
+    }
 
-        &__link:focus &__svg {
-            fill: $second-accent-color;
-        }
+    &__link:focus &__svg {
+        fill: $second-accent-color;
     }
 
 }
