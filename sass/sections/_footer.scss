@@ -3,20 +3,15 @@
     padding: 60px 0;
 
     &__container {
-        display: flex;
+        @include flexbox();
         gap: 93px;
     }
 
     &__logo {
-        color: $accent-color;
-        font-family: Raleway;
-        font-size: 26px;
-        font-weight: 700;
-        line-height: normal;
-        letter-spacing: 0.78px;
+        @include logo();
 
         &__accent--footer {
-            color: $second-accent-color;
+            @include logo($logo-color: $second-accent-color);
         }
     }
 
@@ -30,7 +25,6 @@
         letter-spacing: 0.42px;
         margin-top: 20px;
         display: block;
-        font-style: normal;
     }
 
     &__link {
@@ -41,7 +35,6 @@
         letter-spacing: 0.42px;
         margin-top: 9px;
         display: block;
-        font-style: normal;
     }
 
     &__icon {
@@ -57,7 +50,7 @@
         }
 
         &__list {
-            display: flex;
+            @include flexbox();
             gap: 10px;
         }
 
@@ -66,9 +59,7 @@
             height: 44px;
             background-color: $footer-icons-bg;
             border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flexbox();
             transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 
             &:hover,
@@ -98,7 +89,7 @@
         }
 
         &__container {
-            display: flex;
+            @include flexbox();
             gap: 12px;
         }
 
@@ -140,9 +131,8 @@
             letter-spacing: 0.96px;
             padding: 10px 28px;
             background-color: $accent-color;
-            display: flex;
+            @include flexbox();
             gap: 10px;
-            align-items: center;
             border-radius: 4px;
             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
             transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;

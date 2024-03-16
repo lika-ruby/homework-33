@@ -37,12 +37,9 @@
         background-color: transparent;
         border: 1px solid rgba(0, 0, 0, 0.1);
         border-radius: 50%;
-        display: block;
         width: 30px;
         height: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexbox();
         position: absolute;
         top: 8px;
         right: 8px;
@@ -65,14 +62,14 @@
     }
 
     &__list {
-        display: flex;
+        @include flexbox();  
         flex-direction: column;
         gap: 10px;
         margin-bottom: 20px;
     }
 
     &__name {
-        display: flex;
+        @include flexbox();
         flex-direction: column;
         gap: 4px;
     }
@@ -145,15 +142,12 @@
         color: rgba(117, 117, 117, 0.5);
         font-size: 12px;
         font-weight: 400;
-        line-height: normal;
         letter-spacing: 0.12px;
     }
 
     &__label {
-        display: flex;
+        @include flexbox();
         gap: 8px;
-        align-items: center;
-        justify-content: center;
     }
 
     &__checkbox {
@@ -218,19 +212,10 @@
     }
 
     &__btn {
-        color: $second-accent-color;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 1.87;
-        letter-spacing: 0.96px;
-        border-radius: 4px;
-        background: $accent-color;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-        padding: 10px 52px;
+        @include button($align: start, $padding: 10px 52px);
         margin: 0 auto;
         display: block;
         margin-top: 40px;
-        transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 
         &:hover,
         &:focus {

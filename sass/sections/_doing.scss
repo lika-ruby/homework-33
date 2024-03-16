@@ -2,18 +2,11 @@
     padding: 47px 0 94px;
 
     &__title {
-        color: $title-color;
-        text-align: center;
-        font-size: 36px;
-        font-weight: 700;
-        line-height: normal;
-        letter-spacing: 1.08px;
-        margin-bottom: 50px;
+        @extend %title;
     }
 
     &__list {
-        display: flex;
-        justify-content: space-between;
+        @include flexbox($justify: space-between);
     }
 
     &__link {
@@ -25,9 +18,7 @@
 
     &__overlay {
         background: rgba(47, 48, 58, 0.8);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexbox();
         height: 70px;
         width: 370px;
         position: absolute;

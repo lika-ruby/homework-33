@@ -9,27 +9,21 @@
 
 
     &__container {
-        display: flex;
-        align-items: center;
+        @include flexbox();
     }
 
     &__logo {
-        color: $accent-color;
-        font-family: Raleway;
-        font-size: 26px;
-        font-weight: 700;
-        line-height: normal;
-        letter-spacing: 0.78px;
-    }
+        @include logo();
 
-    &__logo__accent--header {
-        color: $logo-accent-color;
+        &__accent--header {
+            @include logo($logo-color: $logo-accent-color);
+        }
     }
 
     &__nav {
 
         &__list {
-            display: flex;
+            @include flexbox();
             gap: 50px;
             margin-left: 93px;
         }
@@ -38,7 +32,6 @@
             color: $title-color;
             font-size: 14px;
             font-weight: 500;
-            line-height: normal;
             letter-spacing: 0.28px;
             position: relative;
             transition: color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
@@ -75,7 +68,7 @@
     }
 
     &__contacts {
-        display: flex;
+        @include flexbox();
         gap: 50px;
         margin-left: auto;
 
@@ -83,11 +76,8 @@
             color: $text-color;
             font-size: 14px;
             font-weight: 500;
-            line-height: normal;
             letter-spacing: 0.28px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flexbox();
             gap: 10px;
             transition: color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 

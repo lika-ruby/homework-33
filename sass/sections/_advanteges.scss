@@ -2,8 +2,7 @@
   padding: 94px 0 47px;
 
   &__list {
-    display: flex;
-    justify-content: space-between;
+    @include flexbox($justify: space-between, $align: flex-start);
   }
 
   &__item {
@@ -15,16 +14,13 @@
     height: 120px;
     background-color: $background-team-color;
     border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexbox();
   }
 
   &__subtitle {
     color: $title-color;
     font-size: 14px;
     font-weight: 700;
-    line-height: normal;
     letter-spacing: 0.42px;
     text-transform: uppercase;
     margin-bottom: 10px;

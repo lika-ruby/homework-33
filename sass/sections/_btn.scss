@@ -6,8 +6,7 @@
     padding: 94px 0 25px;
 
     &__list {
-        display: flex;
-        justify-content: center;
+        @include flexbox();
         gap: 8px;
     }
 

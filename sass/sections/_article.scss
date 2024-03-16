@@ -2,8 +2,7 @@
     padding: 25px 0 94px;
 
     &__list {
-        display: flex;
-        flex-wrap: wrap;
+        @include flexbox($justify: flex-start, $align: flex-start);
         gap: 30px;
         max-width: 1200px;
         width: 100%;

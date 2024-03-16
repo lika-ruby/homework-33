@@ -12,8 +12,7 @@
     background-repeat: no-repeat;
 
     &__container {
-        display: flex;
-        align-items: center;
+        @include flexbox();
         flex-direction: column;
     }
 
@@ -35,17 +34,7 @@
 
 
     &__button {
-        color: $second-accent-color;
-        text-align: center;
-        padding: 10px 32px;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 1.87;
-        letter-spacing: 0.96px;
-        border-radius: 4px;
-        background-color: $accent-color;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-        transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+        @include button();
         animation-name: btn-move;
         animation-duration: 1s;
         animation-timing-function: ease-in-out;
